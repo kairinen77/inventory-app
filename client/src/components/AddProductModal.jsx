@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CATEGORIES = ['Electronics', 'Clothing', 'Food', 'Tools', 'Sports', 'Other'];
+const CATEGORIES = ['Family', 'Strategy', 'Party', "Children's", 'Card Games', 'Other'];
 
 export default function AddProductModal({ onClose, onAdd, categories }) {
   const allCats = categories.length > 0 ? categories : CATEGORIES;
@@ -25,13 +25,13 @@ export default function AddProductModal({ onClose, onAdd, categories }) {
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-md">
         <div className="flex items-center justify-between px-6 py-4 border-b">
-          <h2 className="text-lg font-bold text-gray-800">Add New Product</h2>
+          <h2 className="text-lg font-bold text-gray-800">Add New Game</h2>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
         </div>
         <form onSubmit={handleSubmit} className="px-6 py-5 space-y-4">
           {[
-            { label: 'Product Name', name: 'name', type: 'text', placeholder: 'e.g. Wireless Mouse' },
-            { label: 'SKU', name: 'sku', type: 'text', placeholder: 'e.g. ELEC-006' },
+            { label: 'Game Name', name: 'name', type: 'text', placeholder: 'e.g. Catan' },
+            { label: 'SKU', name: 'sku', type: 'text', placeholder: 'e.g. BG-021' },
             { label: 'Quantity', name: 'quantity', type: 'number', placeholder: '0', min: '0' },
             { label: 'Price ($)', name: 'price', type: 'number', placeholder: '0.00', step: '0.01', min: '0' },
           ].map((f) => (
@@ -67,7 +67,7 @@ export default function AddProductModal({ onClose, onAdd, categories }) {
             <button
               type="submit"
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-2 transition font-semibold"
-            >Add Product</button>
+            >Add Game</button>
           </div>
         </form>
       </div>

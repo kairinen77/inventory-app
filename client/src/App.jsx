@@ -116,9 +116,9 @@ export default function App() {
           </select>
           <button
             onClick={() => setShowModal(true)}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg transition"
+            className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-5 py-2 rounded-lg transition"
           >
-            + Add Product
+            + Add Game
           </button>
         </div>
 
